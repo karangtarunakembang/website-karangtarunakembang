@@ -5,12 +5,14 @@ import { tokenTypes } from "../../constants/config/tokens";
 
 export const generateToken = (
   userId: string,
+  userRole: string,
   expires: moment.Moment,
   type: string,
   secret: string = config.jwt.secret
 ): string => {
   const payload = {
     sub: userId,
+    role: userRole,
     iat: moment().unix(),
     exp: expires.unix(),
     type,
@@ -28,13 +30,14 @@ export const verifyToken = (token: string, type: string) => {
   return payload;
 };
 
-export const generateAuthTokens = (user: { id: string }) => {
+export const generateAuthTokens = (user: { id: string; role: string }) => {
   const accessTokenExpires = moment().add(
     config.jwt.accessExpirationMinutes,
     "minutes"
   );
   const accessToken = generateToken(
     user.id,
+    user.role,
     accessTokenExpires,
     tokenTypes.ACCESS
   );
@@ -45,6 +48,7 @@ export const generateAuthTokens = (user: { id: string }) => {
   );
   const refreshToken = generateToken(
     user.id,
+    user.role,
     refreshTokenExpires,
     tokenTypes.REFRESH
   );

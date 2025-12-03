@@ -13,7 +13,7 @@ model User {
   username  String
   email     String   @unique
   password  String
-  role      Role     @default(ADMIN)
+  role      Role     @default(admin)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -83,5 +83,6 @@ enum ProgramCategory {
 }
 
 enum Role {
-  ADMIN
+  admin
+  user
 }

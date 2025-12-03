@@ -8,7 +8,7 @@ export async function uploadProgramImage(file: File): Promise<string> {
     .from("program-images")
     .upload(fileName, file);
 
-  if (error) throw new Error(error.message);
+  if (error) console.error(error.message);
 
   const { data: publicUrlData } = supabase.storage
     .from("program-images")

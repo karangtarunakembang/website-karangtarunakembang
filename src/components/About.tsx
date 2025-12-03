@@ -1,8 +1,7 @@
-// src/components/About.tsx
 "use client";
 
 import Image from "next/image";
-import aboutImage from "../assets/gallery5.png";
+import aboutImage from "../assets/aboutLogoKartar.png";
 import { motion } from "framer-motion";
 import { easeOut } from "framer-motion";
 import { spring } from "framer-motion";
@@ -37,11 +36,6 @@ const textItemVariants = {
 };
 
 export default function About() {
-  const visiText = "Bertujuan untuk berkontribusi positif bagi masyarakat.";
-
-  const misiText =
-    "Meningkatkan kepedulian terhadap lingkungan sosial masyarakat.";
-
   return (
     <div className="bg-white font-sans overflow-hidden min-h-screen" id="about">
       <main className="flex flex-col md:flex-row min-h-screen">
@@ -56,7 +50,7 @@ export default function About() {
           <Image
             src={aboutImage}
             alt="Foto kegiatan Karang Taruna Dusun Kembang"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
             priority
           />
 
@@ -74,35 +68,65 @@ export default function About() {
           >
             {/* Judul */}
             <motion.div variants={textItemVariants}>
-              <h1 className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight mb-2">
-                Tentang Karang Taruna <br />
-                <span className="text-[#1581bc] font-bold">Dusun Kembang</span>
+              <h1 className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight mb-6">
+                Filosofi Logo{" "}
+                <span className="text-[#1581bc]">
+                  <br />
+                  Karang Taruna
+                </span>
               </h1>
             </motion.div>
 
             {/* Isi */}
             <div className="mt-8 space-y-8">
-              {/* VISI */}
+              {/* 1 */}
               <motion.div variants={textItemVariants}>
-                <div className="flex items-center gap-3 mb-2">
-                  <h2 className="text-xl font-bold text-gray-900 tracking-wide">
-                    VISI
-                  </h2>
-                </div>
+                <h2 className="text-xl font-semibold text-gray-950 mb-2">
+                  1. Lingkaran Luar dengan Tulisan “PERSATUAN PEMUDA PEMUDI
+                  KEMBANG”
+                </h2>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  {visiText}
+                  Melambangkan kesatuan dan kebersamaan seluruh anggota tanpa
+                  membedakan latar belakang. Bentuk lingkaran menggambarkan
+                  kesinambungan dan kekompakan yang tak terputus.
                 </p>
               </motion.div>
 
-              {/* MISI */}
+              {/* 2 */}
               <motion.div variants={textItemVariants}>
-                <div className="flex items-center gap-3 mb-2">
-                  <h2 className="text-xl font-bold text-gray-900 tracking-wide">
-                    MISI
-                  </h2>
-                </div>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line text-lg">
-                  {misiText}
+                <h2 className="text-xl font-semibold text-gray-950 mb-2">
+                  2. Dua Tangan Mengepal Memegang Bunga Melati Putih
+                </h2>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Tangan mengepal melambangkan semangat juang, kekuatan, dan
+                  keberanian. Bunga melati putih adalah simbol kesucian,
+                  ketulusan, dan niat murni dalam berorganisasi, serta
+                  mencerminkan identitas lokal dan nilai budaya yang dijunjung.
+                </p>
+              </motion.div>
+
+              {/* 3 */}
+              <motion.div variants={textItemVariants}>
+                <h2 className="text-xl font-semibold text-gray-950 mb-2">
+                  3. Lambang Karang Taruna di Tengah
+                </h2>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Menggambarkan bahwa organisasi ini berlandaskan nilai-nilai
+                  Karang Taruna yang fokus kepada kegiatan sosial
+                  kemasyarakatan.
+                </p>
+              </motion.div>
+
+              {/* 4 */}
+              <motion.div variants={textItemVariants}>
+                <h2 className="text-xl font-semibold text-gray-950 mb-2">
+                  4. Pita Emas Bertuliskan “P THREE K”
+                </h2>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Pita emas melambangkan keberanian, kebanggaan, dan kejayaan.
+                  Tulisan “P THREE K” merupakan singkatan dari Persatuan Pemuda
+                  Pemudi Kembang, yang terdiri dari tiga huruf P dan satu huruf
+                  K.
                 </p>
               </motion.div>
             </div>

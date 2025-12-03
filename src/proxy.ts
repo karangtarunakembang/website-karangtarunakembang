@@ -42,5 +42,5 @@ export async function proxy(req: NextRequest) {
 
 // Path yang diawasi middleware
 export const config = {
-  matcher: ["/admin/:path*", "/auth/login", "/auth/register"],
+  matcher: ["/admin/:path*", "/auth/login"],
 };

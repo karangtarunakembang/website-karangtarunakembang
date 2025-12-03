@@ -69,7 +69,7 @@ export const loginUser = async (ctx: Context, input: LoginInput) => {
     }
 
     // Buat Access dan Refresh Token
-    const tokens = generateAuthTokens({ id: user.id });
+    const tokens = generateAuthTokens({ id: user.id, role: user.role });
     const cookieStore = await cookies();
 
     // Atur Access Token

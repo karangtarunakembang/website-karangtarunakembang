@@ -4,7 +4,7 @@ import { TRPCError } from "@trpc/server";
 
 export const listMarketplace = async () => {
   return await prisma.marketplaceItem.findMany({
-    orderBy: { createdAt: "asc" },
+    orderBy: { createdAt: "desc" },
   });
 };
 

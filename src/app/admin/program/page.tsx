@@ -369,7 +369,7 @@ export default function AdminProgramsPage() {
 
               {/* Upload Gambar */}
               <label className="block mb-2 text-sm font-medium">
-                Gambar (Rasio 4:3 disarankan)
+                Maksimal ukuran file <span className="font-bold">1 MB</span>.
               </label>
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
                 <div className="relative w-full h-32 sm:w-32 sm:h-24 bg-gray-100 rounded flex items-center justify-center overflow-hidden shrink-0">
@@ -407,13 +407,13 @@ export default function AdminProgramsPage() {
                 <button
                   onClick={resetModal}
                   type="button"
-                  className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium"
+                  className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium cursor-pointer"
                 >
                   Batal
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium cursor-pointer "
                   disabled={uploading}
                 >
                   {uploading ? (
