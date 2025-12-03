@@ -17,7 +17,7 @@ export const isAuthenticated = t.middleware(({ ctx, next }) => {
 });
 
 export const isAdmin = isAuthenticated.unstable_pipe(({ ctx, next }) => {
-  if (ctx.dbUser?.role !== "ADMIN") {
+  if (ctx.dbUser?.role !== "admin") {
     throw new TRPCError({ code: "FORBIDDEN", message: "Admin only" });
   }
   return next({ ctx });
