@@ -1,0 +1,5 @@
+// src/server/config/tokens.ts
+export const tokenTypes = {
+  ACCESS: "access",
+  REFRESH: "refresh",
+} as const;
