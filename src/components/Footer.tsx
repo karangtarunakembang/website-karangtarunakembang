@@ -1,8 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
-
-import aboutImage from "../assets/aboutLogo.png";
 
 const Footer = () => {
   const visiText = "Bertujuan untuk berkontribusi positif bagi masyarakat.";

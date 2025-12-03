@@ -1,5 +1,3 @@
-// app/page.tsx
-
 import { Metadata } from "next";
 import About from "../components/About";
 import Activities from "../components/Activities";
@@ -13,6 +11,9 @@ export const metadata: Metadata = {
   title: "Karang Taruna Dusun Kembang",
   description:
     "Website resmi Karang Taruna Dusun Kembang yang berisi informasi  program dan kegiatan, struktur organisasi Karang Taruna dan dusun, profil serta visi misi karang taruna, galeri foto, hingga marketplace UMKM untuk mendukung ekonomi warga",
+  icons: {
+    icon: "/logoKartar.png",
+  },
 };
 
 export default function Home() {
