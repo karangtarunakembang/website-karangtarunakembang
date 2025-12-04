@@ -8,7 +8,7 @@ const dusunData = {
     { position: "Ketua RT 1", name: "Abah Yaman" },
     { position: "Ketua RT 2", name: "Bapak Parnoto" },
   ],
-  DataRtS: [
+  DataRtSecond: [
     { position: "Ketua RT 3", name: "Bapak Heri" },
     { position: "Ketua RT 4", name: "Bapak Jupri" },
   ],
@@ -131,7 +131,7 @@ export default function DusunChart() {
 
       {/* currentDelay sekarang 550ms. Tambahkan 50ms (600ms) dan 50ms per iterasi */}
       <div className="flex justify-center items-start gap-x-[54px] sm:gap-x-[150px] md:gap-x-[120px] lg:gap-x-[314px] xl:gap-[340px]">
-        {dusunData.DataRt.map((member, index) => (
+        {dusunData.DataRtSecond.map((member, index) => (
           <motion.div
             key={`rt-${index}`}
             {...fadeIn(currentDelay + 50 + index * 100)}
