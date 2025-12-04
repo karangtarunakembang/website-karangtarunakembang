@@ -11,6 +11,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { Toaster } from "react-hot-toast";
 import LayoutWithConditionalComponents from "@/components/LayoutWithConditionalComponents";
 import { LoadingProvider, useLoadingContext } from "@/context/LoadingContext";
+import { AnalyticsLoader } from "@/components/AnalyticsLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <AnalyticsLoader />
         <LoadingProvider>
           <LayoutWithLoadingControl>{children}</LayoutWithLoadingControl>
         </LoadingProvider>

@@ -1,3 +1,5 @@
+// "use client";
+
 import { Metadata } from "next";
 import About from "../components/About";
 import Activities from "../components/Activities";
