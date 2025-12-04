@@ -49,8 +49,10 @@ const MemberCard = ({
       position ? "w-44 lg:w-48 " : "min-w-28 lg:min-w-32"
     } group relative flex flex-col items-center justify-center py-2 px-3 rounded-xl shadow-lg bg-gray-800 border border-gray-700 hover:scale-105 transition-all duration-300 ease-in-out`}
   >
-    <p className="text-sm font-semibold text-gray-100">{name}</p>
-    {position && <p className="text-xs text-gray-400">{position}</p>}
+    <p className="text-sm font-semibold text-gray-100 text-center">{name}</p>
+    {position && (
+      <p className="text-xs text-gray-400 text-center">{position}</p>
+    )}
   </div>
 );
 
@@ -74,7 +76,7 @@ export default function KarangTarunaChart() {
         {/* 50ms */}
         <motion.div
           {...fadeIn((currentDelay += STEP))}
-          className="text-bbg-black mb-2"
+          className="text-black mb-2"
         >
           Penasehat
         </motion.div>
