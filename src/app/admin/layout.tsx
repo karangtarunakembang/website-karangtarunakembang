@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     template: "%s | Admin Karang Taruna",
   },
   description: "Panel administrasi Karang Taruna Dusun Kembang.",
+  icons: {
+    icon: "/logoKartar.png",
+  },
 };
 
 export default function AdminLayout({
